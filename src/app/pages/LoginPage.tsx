@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { GraduationCap, Eye, EyeOff, BarChart3, CheckCircle2, BookOpen } from "lucide-react";
+import {
+  GraduationCap,
+  Eye,
+  EyeOff,
+  BarChart3,
+  CheckCircle2,
+  BookOpen,
+} from "lucide-react";
 
 export function LoginPage() {
   const navigate = useNavigate();
@@ -25,10 +32,12 @@ export function LoginPage() {
       <div className="hidden lg:flex flex-col justify-between w-1/2 bg-[#0F172A] p-12 relative overflow-hidden">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-full h-full"
+          <div
+            className="absolute top-0 left-0 w-full h-full"
             style={{
-              backgroundImage: "radial-gradient(circle at 25px 25px, white 2px, transparent 0)",
-              backgroundSize: "50px 50px"
+              backgroundImage:
+                "radial-gradient(circle at 25px 25px, white 2px, transparent 0)",
+              backgroundSize: "50px 50px",
             }}
           />
         </div>
@@ -44,7 +53,9 @@ export function LoginPage() {
             </div>
             <div>
               <div className="text-xl font-bold text-white">AvaliaEdu</div>
-              <div className="text-xs text-blue-300">Plataforma Inteligente de Avaliação Educacional</div>
+              <div className="text-xs text-blue-300">
+                Plataforma Inteligente de Avaliação Educacional
+              </div>
             </div>
           </div>
         </div>
@@ -52,20 +63,29 @@ export function LoginPage() {
         {/* Center content */}
         <div className="relative z-10">
           <h1 className="text-3xl font-bold text-white mb-4 leading-tight">
-            Avaliação educacional<br />
-            <span className="text-[#2563EB]">inteligente</span> para<br />
+            Avaliação educacional
+            <br />
+            <span className="text-[#2563EB]">inteligente</span> para
+            <br />
             municípios brasileiros
           </h1>
           <p className="text-slate-400 text-sm mb-8 leading-relaxed">
-            Crie provas alinhadas ao SAEB e SPAECE, escaneie gabaritos automaticamente e gere relatórios pedagógicos em minutos.
+            Crie provas alinhadas ao SAEB e SPAECE, escaneie gabaritos
+            automaticamente e gere relatórios pedagógicos em minutos.
           </p>
 
           {/* Features */}
           <div className="space-y-4">
             {[
-              { icon: CheckCircle2, text: "Correção automática por visão computacional" },
+              {
+                icon: CheckCircle2,
+                text: "Correção automática por visão computacional",
+              },
               { icon: BarChart3, text: "Analytics alinhados ao SAEB e SPAECE" },
-              { icon: BookOpen, text: "Banco de questões com habilidades categorizadas" },
+              {
+                icon: BookOpen,
+                text: "Banco de questões com habilidades categorizadas",
+              },
             ].map((f, i) => (
               <div key={i} className="flex items-center gap-3">
                 <f.icon size={18} className="text-[#10B981] flex-shrink-0" />
@@ -82,7 +102,10 @@ export function LoginPage() {
             { value: "18.5k", label: "Alunos" },
             { value: "98%", label: "Precisão OMR" },
           ].map((s, i) => (
-            <div key={i} className="bg-white/5 rounded-xl p-4 border border-white/10">
+            <div
+              key={i}
+              className="bg-white/5 rounded-xl p-4 border border-white/10"
+            >
               <div className="text-xl font-bold text-white">{s.value}</div>
               <div className="text-xs text-slate-400">{s.label}</div>
             </div>
@@ -102,8 +125,12 @@ export function LoginPage() {
           </div>
 
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-[#0F172A]">Bem-vindo de volta</h2>
-            <p className="text-slate-500 text-sm mt-1">Entre na sua conta para continuar</p>
+            <h2 className="text-2xl font-bold text-[#0F172A]">
+              Bem-vindo de volta
+            </h2>
+            <p className="text-slate-500 text-sm mt-1">
+              Entre na sua conta para continuar
+            </p>
           </div>
 
           {/* Role selector */}
@@ -112,7 +139,9 @@ export function LoginPage() {
               <button
                 key={role}
                 className={`flex-1 py-1.5 px-3 rounded-md text-xs font-medium transition-all ${
-                  i === 0 ? "bg-white text-[#2563EB] shadow-sm" : "text-slate-500 hover:text-slate-700"
+                  i === 0
+                    ? "bg-white text-[#2563EB] shadow-sm"
+                    : "text-slate-500 hover:text-slate-700"
                 }`}
               >
                 {role}
@@ -122,7 +151,9 @@ export function LoginPage() {
 
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-[#0F172A] mb-1.5">E-mail institucional</label>
+              <label className="block text-sm font-medium text-[#0F172A] mb-1.5">
+                E-mail institucional
+              </label>
               <input
                 type="email"
                 value={email}
@@ -133,8 +164,12 @@ export function LoginPage() {
 
             <div>
               <div className="flex items-center justify-between mb-1.5">
-                <label className="text-sm font-medium text-[#0F172A]">Senha</label>
-                <button className="text-xs text-[#2563EB] hover:underline">Esqueceu a senha?</button>
+                <label className="text-sm font-medium text-[#0F172A]">
+                  Senha
+                </label>
+                <button className="text-xs text-[#2563EB] hover:underline">
+                  Esqueceu a senha?
+                </button>
               </div>
               <div className="relative">
                 <input
@@ -153,8 +188,15 @@ export function LoginPage() {
             </div>
 
             <div className="flex items-center gap-2">
-              <input type="checkbox" id="remember" className="w-4 h-4 accent-[#2563EB] rounded" defaultChecked />
-              <label htmlFor="remember" className="text-sm text-slate-600">Manter conectado</label>
+              <input
+                type="checkbox"
+                id="remember"
+                className="w-4 h-4 accent-[#2563EB] rounded"
+                defaultChecked
+              />
+              <label htmlFor="remember" className="text-sm text-slate-600">
+                Manter conectado
+              </label>
             </div>
 
             <button
@@ -176,7 +218,7 @@ export function LoginPage() {
           <div className="mt-6 pt-6 border-t border-gray-100">
             <div className="flex items-center gap-2 text-xs text-slate-400 justify-center">
               <div className="w-2 h-2 rounded-full bg-[#10B981]" />
-              Sistema operacional · Versão 2.4.1
+              Sistema operacional · Versão 0.1.0
             </div>
           </div>
 
